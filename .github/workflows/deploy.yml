@@ -23,6 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Show environment variables (optional, for debugging)
+      run: echo $DISCORD_TOKEN_ARELITTA
+
     - name: Deploy bot
       env:
         DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
