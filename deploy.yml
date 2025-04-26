@@ -3,7 +3,7 @@ name: Deploy Bot
 on:
   push:
     branches:
-      - main  # o la rama que usas para despliegues
+      - main
 
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Deploy bot
-     env:
-  DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
+      env:
+        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
       run: |
         python bot.py
