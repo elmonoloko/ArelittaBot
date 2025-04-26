@@ -27,10 +27,10 @@ jobs:
       run: |
         if [ -z "$DISCORD_TOKEN_ARELITTA" ]; then echo "Token no presente"; exit 1; else echo "Token presente"; fi
       env:
-        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
+        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA}}
 
     - name: Run bot
       env:
-        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
+        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA}}
       run: |
         python bot.py
