@@ -7,5 +7,5 @@ bot = commands.Bot(command_prefix="!")
 async def on_ready():
     print(f'Logged in as {bot.user}')
 
-# Asegúrate de que el token provenga de la variable de entorno
-bot.run(os.getenv("DISCORD_TOKEN"))
+# Asegúrate de que el token provenga de la variable de entorno correcta
+bot.run(os.getenv("DISCORD_TOKEN_ARELITTA"))
