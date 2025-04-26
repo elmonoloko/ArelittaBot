@@ -23,7 +23,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy bot
+    - name: Verificar que el token esté presente (debug temporal)
+      run: |
+        if [ -z "$DISCORD_TOKEN_ARELITTA" ]; then echo "Token no presente"; exit 1; else echo "Token presente"; fi
+      env:
+        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
+
+    - name: Run bot
       env:
         DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
       run: |
