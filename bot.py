@@ -17,8 +17,7 @@ token = os.getenv("DISCORD_TOKEN_ARELITTA")
 if token is None:
     raise RuntimeError("El token no está definido en las variables de entorno.")
 else:
-    print("Token cargado correctamente.")
-
+    print("Token cargado correctamente.")  # Esto te permitirá ver si el token se carga bien
 
 bot.run(token)
 
