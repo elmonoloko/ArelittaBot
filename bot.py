@@ -13,9 +13,13 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user}')
 
-# Verifica que el token esté definido correctamente en las variables de entorno
 token = os.getenv("DISCORD_TOKEN_ARELITTA")
 if token is None:
     raise RuntimeError("El token no está definido en las variables de entorno.")
+else:
+    print("Token cargado correctamente.")
+
 
 bot.run(token)
+
+
