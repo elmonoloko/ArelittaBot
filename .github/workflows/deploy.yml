@@ -25,6 +25,6 @@ jobs:
 
     - name: Deploy bot
       env:
-        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA }}
+        DISCORD_TOKEN_ARELITTA: ${{ secrets.DISCORD_TOKEN_ARELITTA}}
       run: |
         python bot.py
