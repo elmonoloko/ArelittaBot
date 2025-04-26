@@ -13,5 +13,10 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user}')
 
-# Asegúrate de que el token provenga de la variable de entorno correcta
-bot.run(os.getenv("DISCORD_TOKEN_ARELITTA"))
+# Validar el token antes de correr el bot
+token = os.getenv("DISCORD_TOKEN_ARELITTA")
+
+if token is None:
+    raise RuntimeError("El token no está definido en las variables de entorno. Verifica que esté configurado correctamente en GitHub Secrets.")
+
+bot.run(token)
