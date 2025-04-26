@@ -18,4 +18,4 @@ async def terriblemala(ctx):
     await ctx.send("¡Este es el comando de prueba de terriblemala!")
 
 # Ejecutar el bot con el token desde una variable de entorno
-bot.run(os.getenv('MTM2NTQ5ODQ0MzY5ODUzNjUyOQ.GUfFYR.9VdnzHSbkKqKi7T8oEdA2UKARpJE0apNsbmTj8'))
+bot.run('MTM2NTQ5ODQ0MzY5ODUzNjUyOQ.GUfFYR.9VdnzHSbkKqKi7T8oEdA2UKARpJE0apNsbmTj8')
